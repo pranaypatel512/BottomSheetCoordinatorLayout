@@ -17,20 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomSheet = new BottomSheetCoordinatorLayout(this);
+        bottomSheet = (BottomSheetCoordinatorLayout) findViewById(R.id.sheet);
         root = (CoordinatorLayout) findViewById(R.id.root);
-
-        CoordinatorLayout.LayoutParams params =
-                new CoordinatorLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT);
-        params.setBehavior(new BottomSheetBehavior());
-        root.addView(bottomSheet, params);
-
         bottomSheet.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
                 bottomSheet.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                BottomSheetBehavior.from(bottomSheet).setState(BottomSheetBehavior.STATE_EXPANDED);
+                BottomSheetBehavior.from(bottomSheet).setState(BottomSheetBehavior.STATE_COLLAPSED);
             }
         });
     }

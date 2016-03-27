@@ -18,20 +18,14 @@ public class BottomSheetCoordinatorLayout extends CoordinatorLayout {
 
     public BottomSheetCoordinatorLayout(Context context) {
         super(context);
-        setBackgroundColor(Color.WHITE);
-        inflate(context, R.layout.sheet_content, this);
     }
 
     public BottomSheetCoordinatorLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setBackgroundColor(Color.WHITE);
-        inflate(context, R.layout.sheet_content, this);
     }
 
     public BottomSheetCoordinatorLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        setBackgroundColor(Color.WHITE);
-        inflate(context, R.layout.sheet_content, this);
     }
 
 

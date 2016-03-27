@@ -12,6 +12,9 @@ import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
 
+/**
+ * Not working test class.
+ */
 @CoordinatorLayout.DefaultBehavior(BottomSheetBehavior.class)
 public class BottomSheetCoordinatorLayout2 extends CoordinatorLayout {
 
